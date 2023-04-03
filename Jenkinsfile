@@ -55,5 +55,13 @@ pipeline{
                 echo "deploying to production..."
             }
         }
+        stage("Deployment finished"){
+            when{
+                branch 'master'
+            }
+            steps{
+                echo "Deployment Finished"
+            }
+        }
     }
 }
